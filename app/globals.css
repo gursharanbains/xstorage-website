@@ -57,7 +57,11 @@
   }
 
   .section-container {
-    @apply container mx-auto py-12;
+    @apply container mx-auto px-0 py-12;
+  }
+
+  .padding-container {
+    @apply px-4 lg:px-0;
   }
 }
 
