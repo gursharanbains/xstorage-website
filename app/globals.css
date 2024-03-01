@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,24 +10,75 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Inter;
+@layer base {
+  body {
+    @apply font-secondary text-secondary bg-gradient-to-b from-[#F6FAFD] to-[#FFFFFF] bg-no-repeat;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-primary text-primary;
+  }
+
+  h1 {
+    @apply text-[40px] xl:text-[80px] font-bold leading-[1.1];
+  }
+  h2 {
+    @apply text-[40px] font-bold leading-tight;
+  }
+  h3 {
+    @apply text-[24px];
+  }
+
+  a {
+    @apply text-secondary font-semibold hover:text-accent-primary_hover transition;
+  }
 }
 
 @layer utilities {
-  .flexCenter {
+  .flex-center {
     @apply flex items-center justify-center;
   }
 
-  .flexBetween {
+  .flex-between {
     @apply flex items-center justify-between;
   }
 
-  .flexStart {
+  .flex-start {
     @apply flex items-center justify-start;
   }
 
-  .flexEnd {
+  .flex-end {
     @apply flex items-center justify-end;
+  }
+
+  .section-container {
+    @apply container mx-auto py-12;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply text-lg h-14 px-8 rounded-full transition text-white;
+  }
+
+  .btn-primary {
+    @apply bg-accent-primary hover:bg-accent-primary_hover;
+  }
+
+  .btn-secondary {
+    @apply bg-accent-secondary hover:bg-accent-secondary_hover;
+  }
+
+  .btn-quaternary {
+    @apply bg-white text-base font-bold text-primary drop-shadow-primary hover:bg-accent-primary_hover hover:text-white;
+  }
+
+  .lead {
+    @apply text-lg text-secondary font-secondary font-medium leading-relaxed;
   }
 }

@@ -5,46 +5,39 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      primary: "Open Sans",
+      secondary: "Nunito",
+    },
+    container: {
+      padding: {
+        DEFAULT: "1rem",
+        lg: "0",
+      },
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1170px",
+    },
     extend: {
       colors: {
-        green: {
-          50: "#30AF5B",
-          90: "#292C27",
-        },
-        gray: {
-          10: "#EEEEEE",
-          20: "#A2A2A2",
-          30: "#7B7B7B",
-          50: "#585858",
-          90: "#141414",
-        },
-        orange: {
-          50: "#FF814C",
-        },
-        blue: {
-          70: "#021639",
-        },
-        yellow: {
-          50: "#FEC601",
+        primary: "#212353",
+        secondary: "#4B5D68",
+        accent: {
+          primary: "#9C69E2",
+          primary_hover: "#9059DB",
+          secondary: "#F063B8",
+          secondary_hover: "#E350A9",
+          tertiary: "#68C9BA",
         },
       },
       backgroundImage: {
-        "bg-img-1": "url('/img-1.png')",
-        "bg-img-2": "url('/img-2.png')",
-        "feature-bg": "url('/feature-bg.png')",
-        pattern: "url('/pattern.png')",
-        "pattern-2": "url('/pattern-bg.png')",
+        hero: "url('../src/assets/img/hero_bg.png')",
       },
-      screens: {
-        xs: "400px",
-        "3xl": "1680px",
-        "4xl": "2200px",
-      },
-      maxWidth: {
-        "10xl": "1512px",
-      },
-      borderRadius: {
-        "5xl": "40px",
+      dropShadow: {
+        primary: " 0px 5px 5px rgba(75, 93, 104, 0.1)",
       },
     },
   },
