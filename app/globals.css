@@ -85,4 +85,8 @@
   .lead {
     @apply text-lg text-secondary font-secondary font-medium leading-relaxed;
   }
+
+  .icon {
+    @apply flex justify-center items-center rounded-full cursor-pointer transition-all;
+  }
 }

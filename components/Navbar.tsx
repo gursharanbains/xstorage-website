@@ -4,34 +4,33 @@ import { navigationData } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
-import { BsArrowRight } from "react-icons/bs";
+import ArrowButton from "./common/ArrowButton";
 
 const Navbar = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
     <nav
-      className="section-container padding-container flex-between"
+      className="section-container padding-container flex-between relative z-20 gap-10"
       data-aos="fade-down"
       data-aos-delay="1200"
       data-aos-duration="1000"
     >
-      <div className="flex-center gap-20">
+      <div className="flex flex-1 items-center gap-4">
         <Image src="/img/logo.png" alt="logo" width={50} height={35} />
+      </div>
+      <div className="flex-center gap-20 z-20">
         <Nav />
         {mobileNavOpen && (
-          <div className="lg:hidden z-20 absolute top-28 right-0 left-0 bg-accent-tertiary font-bold rounded transition-all">
+          <div className="lg:hidden absolute top-28 right-0 left-0 bg-accent-tertiary font-bold rounded transition-all">
             <MobileNav />
           </div>
         )}
       </div>
-      <button className="btn btn-quaternary flex-between gap-2 group">
-        Request Demo{" "}
-        <BsArrowRight className="text-2xl text-accent-primary_hover group-hover:text-white transition duration-300" />{" "}
-      </button>
+      <ArrowButton text="Request Demo" />
       <div
         onClick={() => setMobileNavOpen(!mobileNavOpen)}
-        className="lg:hidden text-primary text-2xl cursor-pointer"
+        className="lg:hidden text-primary text-2xl cursor-pointer flex-1 flex justify-center"
       >
         <FaBars />
       </div>

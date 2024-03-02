@@ -39,6 +39,10 @@ module.exports = {
       dropShadow: {
         primary: " 0px 5px 5px rgba(75, 93, 104, 0.1)",
       },
+      borderRadius: {
+        "4xl": "40px",
+        "5xl": "50px",
+      },
     },
   },
   plugins: [],

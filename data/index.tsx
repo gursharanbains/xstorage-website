@@ -130,10 +130,12 @@ export const ctaData = {
   btnText2: "Request Demo",
 };
 
+export type IconType = typeof FaYoutube;
+
 export const footerData = {
   logo: LogoV2,
-  address: "Warehouse Society, 234 Bahagia Ave Street PRBW 29281",
-  email: "info@warehouse.project",
+  address: "XStorage, 234 Bahagia Ave Street PRBW 29281",
+  email: "info@xstorage.com",
   phone: "1-232-3434 (Main)",
   list1: [
     {
@@ -177,15 +179,15 @@ export const footerData = {
   ],
   socialList: [
     {
-      icon: FaYoutube,
+      icon: <FaYoutube />,
       href: "#",
     },
     {
-      icon: FaInstagram,
+      icon: <FaInstagram />,
       href: "#",
     },
     {
-      icon: FaGithub,
+      icon: <FaGithub />,
       href: "#",
     },
   ],
@@ -193,5 +195,5 @@ export const footerData = {
 
 export const copyrightData = {
   text: "© Datawarehouse™, 2020. All rights reserved. Company Registration Number: 21479524.",
-  icon: BsChatDotsFill,
+  icon: <BsChatDotsFill />,
 };
